@@ -1,0 +1,13 @@
+// A single one (100 points)
+// A single five (50 points)
+// Triple ones [1,1,1] (1000 points)
+// Triple twos [2,2,2] (200 points)
+// Triple threes [3,3,3] (300 points)
+// Triple fours [4,4,4] (400 points)
+// Triple fives [5,5,5] (500 points)
+// Triple sixes [6,6,6] (600 points)
+
+// Example
+// [1,1,1,5,1] = 1150 points
+// [2,3,4,6,2] = 0 points
+// [3,4,5,3,3] = 350 points
