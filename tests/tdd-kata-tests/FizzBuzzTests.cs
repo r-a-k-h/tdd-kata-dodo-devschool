@@ -15,5 +15,17 @@ namespace tdd_kata_tests
 
             Assert.AreEqual("1", result);
         }
+        
+        [Test]
+        [TestCase(3)]
+        [TestCase(6)]
+        public void For_input_divisible_by_3_return_Fizz(int input)
+        {
+            var sut = new FizzBuzzClass();
+
+            var result = sut.FizzBuzz(input);
+
+            Assert.AreEqual("Fizz", result);
+        }
     }
 }
