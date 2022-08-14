@@ -4,6 +4,11 @@ namespace tdd_kata_dodo
     {
         public bool CheckIsbn13(string input)
         {
+            if (string.IsNullOrEmpty(input))
+            {
+                return false;
+            }
+            
             var strWithoutSpaces = input.Replace(" ", null);
             var strWithoutSpacesAndDashes = strWithoutSpaces.Replace("-", null);
             
