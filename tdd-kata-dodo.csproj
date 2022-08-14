@@ -6,4 +6,16 @@
         <RootNamespace>tdd_kata_dodo</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="tests\**" />
+    </ItemGroup>
+
 </Project>
