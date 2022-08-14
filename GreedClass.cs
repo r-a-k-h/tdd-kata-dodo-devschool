@@ -11,6 +11,7 @@ namespace tdd_kata_dodo
             var countOnes = dices.Count(d => d == 1);
             var countTwos = dices.Count(d => d == 2);
             var countThrees = dices.Count(d => d == 3);
+            var countFours = dices.Count(d => d == 4);
 
             if (countOnes >= 3)
             {
@@ -25,6 +26,11 @@ namespace tdd_kata_dodo
             if (countThrees >= 3)
             {
                 sum += 300;
+            }
+            
+            if (countFours >= 3)
+            {
+                sum += 400;
             }
 
             if ((countOnes != 3) && (dices[0] == 1 || dices[1] == 1 || dices[2] == 1 || dices[3] == 1 || dices[4] == 1))
