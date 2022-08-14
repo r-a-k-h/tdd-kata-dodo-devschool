@@ -8,15 +8,15 @@ namespace tdd_kata_dodo
             
             if (first == 1 || second == 1 || third == 1 || fourth == 1 || fifth == 1)
             {
-                return 100;
+                sum += 100;
             }
             
             if (first == 5 || second == 5 || third == 5 || fourth == 5 || fifth == 5)
             {
-                return 50;
+                sum += 50;
             }
             
-            return 0;
+            return sum;
         }
     }
 }
