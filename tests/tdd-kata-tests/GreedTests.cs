@@ -206,5 +206,23 @@ namespace tdd_kata_tests
             
             Assert.AreEqual(600, result);
         }
+        
+        [Test]
+        [TestCase(1, 1, 1, 5, 1, 1150)]
+        [TestCase(2, 3, 4, 6, 2, 0)]
+        [TestCase(3, 4, 5, 3, 3, 350)]
+        public void Roll_dices_correct_sum(int first, int second, int third, int fourth, int fifth, int expected)
+        {
+            var sut = new GreedClass();
+
+            var dices = new[]
+            {
+                first, second, third, fourth, fifth
+            };
+            
+            var result = sut.RollDices(dices);
+            
+            Assert.AreEqual(expected, result);
+        }
     }
 }
