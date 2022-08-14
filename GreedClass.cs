@@ -10,7 +10,7 @@ namespace tdd_kata_dodo
 
             var countOnes = dices.Count(d => d == 1);
 
-            if (countOnes == 3)
+            if (countOnes >= 3)
             {
                 sum += 1000;
             }
