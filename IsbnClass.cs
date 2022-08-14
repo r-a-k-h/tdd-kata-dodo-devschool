@@ -6,28 +6,24 @@ namespace tdd_kata_dodo
     {
         public bool CheckIsbn13(string input)
         {
-            if (CheckLenghtOfIsbn13(input))
+            if (CheckLenghtOfIsbn13(input, out var clearInput))
             {
-                return true;
+                var result = CheckMultiplyingIsbn13Digits(clearInput);
+                return result;
             }
 
             return false;
         }
 
-        public bool CheckLenghtOfIsbn13(string input)
+        public bool CheckLenghtOfIsbn13(string input, out string clearInput)
         {
-            if (!string.IsNullOrEmpty(input))
-            {
-                var clearInput = input.Replace(" ", null).Replace("-", null);
-                if (clearInput.Length != 13)
-                {
-                    return false;
-                }
+            clearInput = string.Empty;
 
-                return true;
-            }
-
-            return false;
+            if (string.IsNullOrEmpty(input)) 
+                return false;
+            
+            clearInput = input.Replace(" ", null).Replace("-", null);
+            return clearInput.Length == 13;
         }
 
         public bool CheckMultiplyingIsbn13Digits(string input)
