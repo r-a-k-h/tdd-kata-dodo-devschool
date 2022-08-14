@@ -146,5 +146,23 @@ namespace tdd_kata_tests
             
             Assert.AreEqual(200, result);
         }
+        
+        [Test]
+        [TestCase(3, 3, 3, 4, 4)]
+        [TestCase(3, 2, 3, 2, 3)]
+        [TestCase(3, 2, 2, 3, 3)]
+        public void If_dropped_triple_threes_return_300(int first, int second, int third, int fourth, int fifth)
+        {
+            var sut = new GreedClass();
+
+            var dices = new[]
+            {
+                first, second, third, fourth, fifth
+            };
+            
+            var result = sut.RollDices(dices);
+            
+            Assert.AreEqual(300, result);
+        }
     }
 }
