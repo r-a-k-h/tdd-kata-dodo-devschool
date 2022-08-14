@@ -4,7 +4,9 @@ namespace tdd_kata_dodo
     {
         public bool CheckIsbn13(string input)
         {
-            if (input.Length != 13)
+            var strWithoutSpaces = input.Replace(" ", null);
+            
+            if (strWithoutSpaces.Length != 13)
             {
                 return false;
             }
