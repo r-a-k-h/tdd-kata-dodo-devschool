@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd-kata-dodo", "tdd-kata-dodo.csproj", "{B9B4912A-F734-4C2A-AA55-D8D07F7290D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd-kata-tests", "tests\tdd-kata-tests\tdd-kata-tests.csproj", "{4668539B-A854-4763-B46A-723E180A4FB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{B9B4912A-F734-4C2A-AA55-D8D07F7290D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9B4912A-F734-4C2A-AA55-D8D07F7290D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9B4912A-F734-4C2A-AA55-D8D07F7290D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4668539B-A854-4763-B46A-723E180A4FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4668539B-A854-4763-B46A-723E180A4FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4668539B-A854-4763-B46A-723E180A4FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4668539B-A854-4763-B46A-723E180A4FB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
