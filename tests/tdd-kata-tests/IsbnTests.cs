@@ -15,7 +15,7 @@ namespace tdd_kata_tests
         {
             var sut = new IsbnClass();
 
-            var result = sut.CheckIsbn13(input);
+            var result = sut.CheckLenghtOfIsbn13(input);
             
             Assert.AreEqual(true, result);
         }
@@ -30,7 +30,7 @@ namespace tdd_kata_tests
         {
             var sut = new IsbnClass();
 
-            var result = sut.CheckIsbn13(input);
+            var result = sut.CheckLenghtOfIsbn13(input);
             
             Assert.AreEqual(false, result);
         }

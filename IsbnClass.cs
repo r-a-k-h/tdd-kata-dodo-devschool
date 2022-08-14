@@ -4,19 +4,28 @@ namespace tdd_kata_dodo
     {
         public bool CheckIsbn13(string input)
         {
-            if (string.IsNullOrEmpty(input))
+            if (CheckLenghtOfIsbn13(input))
             {
-                return false;
-            }
-            
-            var clearInput = input.Replace(" ", null).Replace("-", null);
-            
-            if (clearInput.Length != 13)
-            {
-                return false;
+                return true;
             }
 
-            return true;
+            return false;
+        }
+
+        public bool CheckLenghtOfIsbn13(string input)
+        {
+            if (!string.IsNullOrEmpty(input))
+            {
+                var clearInput = input.Replace(" ", null).Replace("-", null);
+                if (clearInput.Length != 13)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+
+            return false;
         }
     }
 }
