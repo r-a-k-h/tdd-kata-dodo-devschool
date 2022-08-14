@@ -29,7 +29,12 @@ namespace tdd_kata_tests
         {
             var sut = new GreedClass();
 
-            var result = sut.RollDices(first, second, third, fourth, fifth);
+            var dices = new[]
+            {
+                first, second, third, fourth, fifth
+            };
+            
+            var result = sut.RollDices(dices);
             
             Assert.AreEqual(100, result);
         }
@@ -44,7 +49,12 @@ namespace tdd_kata_tests
         {
             var sut = new GreedClass();
 
-            var result = sut.RollDices(first, second, third, fourth, fifth);
+            var dices = new[]
+            {
+                first, second, third, fourth, fifth
+            };
+            
+            var result = sut.RollDices(dices);
             
             Assert.AreEqual(50, result);
         }
@@ -59,9 +69,32 @@ namespace tdd_kata_tests
         {
             var sut = new GreedClass();
 
-            var result = sut.RollDices(first, second, third, fourth, fifth);
+            var dices = new[]
+            {
+                first, second, third, fourth, fifth
+            };
+            
+            var result = sut.RollDices(dices);
             
             Assert.AreEqual(150, result);
+        }
+        
+        [Test]
+        [TestCase(1, 1, 1, 4, 4)]
+        [TestCase(3, 1, 3, 1, 1)]
+        [TestCase(1, 2, 1, 1, 4)]
+        public void If_dropped_triple_ones_return_1000(int first, int second, int third, int fourth, int fifth)
+        {
+            var sut = new GreedClass();
+
+            var dices = new[]
+            {
+                first, second, third, fourth, fifth
+            };
+            
+            var result = sut.RollDices(dices);
+            
+            Assert.AreEqual(1000, result);
         }
     }
 }
