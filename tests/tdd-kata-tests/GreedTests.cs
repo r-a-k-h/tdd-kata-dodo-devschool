@@ -33,5 +33,20 @@ namespace tdd_kata_tests
             
             Assert.AreEqual(100, result);
         }
+        
+        [Test]
+        [TestCase(5, 2, 3, 4, 4)]
+        [TestCase(2, 5, 3, 4, 4)]
+        [TestCase(3, 2, 5, 4, 4)]
+        [TestCase(3, 2, 4, 5, 4)]
+        [TestCase(3, 2, 4, 4, 5)]
+        public void If_dropped_just_single_five_return_50(int first, int second, int third, int fourth, int fifth)
+        {
+            var sut = new GreedClass();
+
+            var result = sut.RollDices(first, second, third, fourth, fifth);
+            
+            Assert.AreEqual(50, result);
+        }
     }
 }

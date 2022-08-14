@@ -11,6 +11,11 @@ namespace tdd_kata_dodo
                 return 100;
             }
             
+            if (first == 5 || second == 5 || third == 5 || fourth == 5 || fifth == 5)
+            {
+                return 50;
+            }
+            
             return 0;
         }
     }
