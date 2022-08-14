@@ -19,7 +19,7 @@ namespace tdd_kata_dodo
                 return "Buzz";
             }
             
-            return "1";
+            return input.ToString();
         }
     }
 }
