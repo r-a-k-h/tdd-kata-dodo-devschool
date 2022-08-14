@@ -9,6 +9,11 @@ namespace tdd_kata_dodo
                 return "Fizz";
             }
             
+            if (input % 5 == 0)
+            {
+                return "Buzz";
+            }
+            
             return "1";
         }
     }

@@ -27,5 +27,17 @@ namespace tdd_kata_tests
 
             Assert.AreEqual("Fizz", result);
         }
+        
+        [Test]
+        [TestCase(5)]
+        [TestCase(10)]
+        public void For_input_divisible_by_5_return_Buzz(int input)
+        {
+            var sut = new FizzBuzzClass();
+
+            var result = sut.FizzBuzz(input);
+
+            Assert.AreEqual("Buzz", result);
+        }
     }
 }
