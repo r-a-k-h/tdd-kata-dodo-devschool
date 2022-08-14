@@ -34,5 +34,35 @@ namespace tdd_kata_tests
             
             Assert.AreEqual(false, result);
         }
+        
+        [Test]
+        [TestCase("9780470059029")]
+        [TestCase("9780471486480")]
+        [TestCase("9780596809485")]
+        [TestCase("9780131495050")]
+        [TestCase("9780262134729")]
+        public void Return_true_if_multiplying_check_is_ok(string input)
+        {
+            var sut = new IsbnClass();
+
+            var result = sut.CheckMultiplyingIsbn13Digits(input);
+            
+            Assert.AreEqual(true, result);
+        }
+        
+        [Test]
+        [TestCase("9780470059020")]
+        [TestCase("9780471486481")]
+        [TestCase("9780596809486")]
+        [TestCase("9780131495051")]
+        [TestCase("9780262134720")]
+        public void Return_false_if_multiplying_check_is_not_ok(string input)
+        {
+            var sut = new IsbnClass();
+
+            var result = sut.CheckMultiplyingIsbn13Digits(input);
+            
+            Assert.AreEqual(false, result);
+        }
     }
 }
