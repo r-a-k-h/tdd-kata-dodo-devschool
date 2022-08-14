@@ -6,7 +6,16 @@ namespace tdd_kata_dodo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            FizzBuzzCheck();
+        }
+
+        private static void FizzBuzzCheck()
+        {
+            var fizzBuzz = new FizzBuzzClass();
+            for (var i = 1; i < 101; i++)
+            {
+                Console.WriteLine(fizzBuzz.FizzBuzz(i));
+            }
         }
     }
 }
